@@ -1,0 +1,48 @@
+<script>
+    //PROBLEMA
+    /*
+    Peça para o feirante informar a quantia de itens que foram vendidos de cada produto.
+    Considere que os itens que comercializa e os seus respectivos preços, são:
+    - Tomate: R$ 3,90 (Kg)
+    - Batata: R$ 3,40 (Kg)
+    - Batata-Doce: R$ 4,70 (Kg)
+    - Alface: R$ 1,50 (Und)
+    - Cebola: R$ 2,90 (Kg)
+    - Cebolinha: R$ 1,40 (Und)
+    - Beterraba: R$ 4,10 (Kg)
+
+    Após o usuário informar a quantia vendida para cada item, calcule e apresente o faturamento do feirante.
+    */
+
+    //ENTRADA
+
+    const tomate = Number(prompt("Informe a quatidade de tomates que foram vendidos:"));
+    const batata = Number(prompt("Informe a quatidade de batata que foram vendidos:"));
+    const batataDoce = Number(prompt("Informe a quatidade de batata doce que foram vendidos:"));
+    const alface = Number(prompt("Informe a quatidade de alface que foram vendidos:"));
+    const cebola = Number(prompt("Informe a quatidade de cebola que foram vendidos:"));
+    const cebolinha = Number(prompt("Informe a quatidade de cebolinha que foram vendidos:"));
+    const beterraba = Number(prompt("Informe a quatidade de beterraba que foram vendidos:"));
+
+   //PROCESSAMENTO
+
+   const precoTomate = 3.90 
+   const precoBatata = 3.40 
+   const precoBatataDoce = 4.70 
+   const precoAlface = 1.50 
+   const precoCebola = 2.90 
+   const precoCebolinha = 1.40 
+   const precoBeterraba = 4.10 
+
+   const calc1 = tomate * precoTomate
+   const calc2 = batata * precoBatata
+   const calc3 = batataDoce * precoBatataDoce
+   const calc4 = alface * precoAlface
+   const calc5 = cebola * precoCebola
+   const calc6 = cebolinha * precoCebolinha
+   const calc7 = beterraba * precoBeterraba
+   const soma = calc1 + calc2 + calc3 + calc4 + calc5 + calc6 + calc7
+    
+    //SAÍDA
+    document.write(`${soma}`)
+</script>
