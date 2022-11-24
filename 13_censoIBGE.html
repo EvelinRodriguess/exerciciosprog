@@ -13,10 +13,41 @@
 
     //ENTRADA
 
+    let salarios = [1200, 2500, 3000, 9000, 850, 4000, 1500, 2300, 3800, 1600];
+    let numeroDeFilhos = [1, 2, 2, 1, 3, 2, 3, 3, 0, 4];
 
     //PROCESSAMENTO
 
-    
+    let totalSalario = 0;
+    let mediaSalario = 0;
+    let totalFilho = 0;
+    let mediaFilho = 0;
+    let maiorSalario = 0;
+    let salario3000 = 0;
+
+    for (let salario of salarios) {
+        totalSalario = totalSalario + salario;
+        if (salario <= 3000) {
+            salario3000++;
+        }
+    }
+
+    mediaSalario = totalSalario / salarios.length;
+    maiorSalario = salarios.sort((a, b) => b - a)[0];
+
+    let percentual3000 = salario3000 / salario.length * 100
+
+    for (let filho of numeroDeFilhos) {
+        totalFilho = totalFilho + filho;
+    }
+
+    mediaFilho = totalFilho / numeroDeFilhos.length;
+
+
     //SAÍDA
 
+    document.write(`Média de Salário: R$ ${mediaSalario.toFixed(2)}</br>`);
+    document.write(`Maior Salário: R$ ${maiorSalario.toFixed(2)}</br>`);
+    document.write(`Famílias com salário até R$ 3.000,00: ${percentual3000.toFixed(2)}%</br>`);
+    document.write(`Média do número de fi lhos: ${mediaFilho.tofixed(2)}`);
 </script>

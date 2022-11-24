@@ -10,7 +10,7 @@
 
     //ENTRADA
 
-    const qtFilme = Number(prompt("Informe quantos filmes deseja cadastrar:"));
+    let qtFilme = parseInt(prompt("Informe quantos filmes deseja cadastrar:"));
 
     let FilmeComédia = [];
     let FilmeDrama = [];
@@ -18,22 +18,29 @@
 
     //PROCESSAMENTO
 
-    for(let contador = 1; contador <= qtFilme; contador++){
-        let filmes = prompt("Informe o nome do filme:");
-        let filmeCadastrado = prompt("Qual o gênero do filme? (Comédia | Drama | Romance)").toUpperCase();
-        if(filmeCadastrado === "COMÉDIA"){
-            FilmeComédia.push(filmes);
+    for (let contador = 1; contador <= qtFilme; contador++) {
+        let nomeFilme = prompt(`Informe o nome do filme ${contador}:`);
+        let generoFilme = prompt(`Informe o gênero do filme ${nomeFilme}? (C-Comédia | D-Drama | R-Romance)`).toUpperCase();
+        if (generoFilme === "C") {
+            FilmeComédia.push(nomeFilme);
         }
-        else if(filmeCadastrado === "DRAMA"){
-            FilmeDrama.push(filmes);
+        else if (generoFilme === "D") {
+            FilmeDrama.push(nomeFilme);
         }
-        else{
-            FilmeRomance.push(filmes);
-        }
+        else if (generoFilme === "R")
+            FilmeRomance.push(nomeFilme);
     }
-    
+
     //SAÍDA
 
-    document.write(`<li>Comédia:${FilmeComédia}</li><li> Drama: ${FilmeDrama} </li><li> Romance: ${FilmeRomance}`);
-    
+    if (FilmeComédia.length > 0) {
+        document.write(`Filmes Comédia: ${FilmeComédia.join(", ")}</br>`);
+    }
+    if (FilmeDrama.length > 0) {
+        document.write(`Filmes Drama: ${FilmeDrama.join(", ")}</br>`);
+    }
+    if (FilmeRomance.length > 0) {
+        document.write(`Filmes Romance: ${FilmeRomance.join(", ")}</br>`);
+    }
+
 </script>
