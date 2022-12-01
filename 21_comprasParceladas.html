@@ -2,7 +2,8 @@
     //PROBLEMA
     /*
     Considere que uma loja utiliza o identificador V para transações à vista e P para transações parceladas.
-    Faça um programa que receba os valores de 10 transações realizadas, separando em listas as transações parceladas e transações à vista.
+    Faça um programa que receba os valores de 10 transações realizadas, separando em listas as transações
+    parceladas e transações à vista.
     Apresente, ao fim do programa, os seguintes dados:
     - Total de compras à vista
     - Total de compras parceladas
@@ -12,9 +13,20 @@
 
     //ENTRADA
 
+    let comprasParceladas = [];
+    let comprasAvista = [];
 
     //PROCESSAMENTO
 
+    for(let contador = 1; contador <= 10; contador++){
+        const pagamento = prompt(`Compra realizada V-A vista ou P-Parcelada?`).trim().toLocaleUpperCase();
+        if(pagamento === "V"){
+            comprasAvista.push(Number(prompt(`Qual o valor da compra:`)));
+        }
+        else{
+            comprasParceladas.push(Number(prompt(`Qual o valor da compra?`)));
+        }
+    }
     
     //SAÍDA
 
